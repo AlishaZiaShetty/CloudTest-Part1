@@ -1,3 +1,4 @@
+/*
 package cloud.test.mytests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -68,3 +69,4 @@ public class BaseTest
         driver.quit();
     }
 }
+*/
