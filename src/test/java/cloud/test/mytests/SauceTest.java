@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class SauceTest extends BaseTestK8s
+public class SauceTest extends BaseTest
 {
     public void doLogin()
     {
@@ -18,13 +18,13 @@ public class SauceTest extends BaseTestK8s
     public void checkInventoryItemTest()
     {
         doLogin();
-        Assert.assertTrue(driver.findElements(By.cssSelector(".inventory_item")).size() == 6);
+        Assert.assertEquals(6, driver.findElements(By.cssSelector(".inventory_item")).size());
     }
 
     @Test(priority=2)
     public void addToCartButtonTest()
     {
         doLogin();
-        Assert.assertTrue(driver.findElements(By.xpath("//button[text()='ADD TO CART']")).size() == 6);
+        Assert.assertEquals(6, driver.findElements(By.xpath("//button[text()='ADD TO CART']")).size());
     }
 }

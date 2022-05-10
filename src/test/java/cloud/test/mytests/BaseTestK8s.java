@@ -1,3 +1,4 @@
+/*
 package cloud.test.mytests;
 
 import com.sun.jna.Platform;
@@ -25,27 +26,15 @@ public class BaseTestK8s
     @BeforeMethod
     public void SetUp(String browserName) throws MalformedURLException {
         System.out.println("browser name is : "+browserName);
-       // String methodName = name.getName();
 
-        String remoteUrl = "http://" +"alishazia" + ":" + "Zalenium2022" + "@" + "35.235.125.5" + "/wd/hub";
+        String remoteUrl = "http://" +"alishazia" + ":" + "Zalenium2022" + "@" + "35.222.57.254" + "/wd/hub";
         System.out.println("zalenium hub url is : "+remoteUrl);
 
-      /*  DesiredCapabilities cap = new DesiredCapabilities();
-     //   cap.setCapability("name", methodName);
-        cap.setCapability(CapabilityType.PLATFORM_NAME, Platform.LINUX);
-        cap.setCapability("build", 111.11);
-        cap.setCapability("idleTimeout", 180);
-        cap.setCapability("recordVideo", true);
-        cap.setCapability("tz", "Asia/Kolkata");
-        cap.setCapability("browserVersion", "latest");
-        cap.setCapability("seleniumVersion", "3.141.59");
-*/
+
         ChromeOptions chromeOptions = new ChromeOptions();
         if(browserName.equals("chrome"))
         {
             WebDriverManager.chromedriver().setup();
-            /*cap.setCapability("browserName", "chrome");
-            cap.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);*/
 
             chromeOptions.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,
                     UnexpectedAlertBehaviour.IGNORE);
@@ -53,13 +42,6 @@ public class BaseTestK8s
 
             driver = new RemoteWebDriver(new URL(remoteUrl), chromeOptions);
         }
-
-     /*   if(browserName.equals("firefox"))
-        {
-            WebDriverManager.firefoxdriver().setup();
-            cap.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
-            *//*cap.setCapability("browserName", "firefox");*//*
-        }*/
 
         try
         {
@@ -79,3 +61,4 @@ public class BaseTestK8s
         driver.quit();
     }
 }
+*/
