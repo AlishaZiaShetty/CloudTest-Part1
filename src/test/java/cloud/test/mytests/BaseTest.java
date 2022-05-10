@@ -20,7 +20,7 @@ public class BaseTest
     @BeforeMethod
     public void SetUp()
     {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\91953\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","src\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://www.saucedemo.com/");
