@@ -46,13 +46,14 @@ public class BaseTest
         Assert.assertEquals(6, driver.findElements(By.cssSelector(".inventory_item")).size());
     }
 
-    @Test(priority=2)
+  /*  @Test(priority=2)
     public void addToCartButtonTest()
     {
         doLogin();
         int size = driver.findElements(By.xpath("//button[text()='ADD TO CART']")).size();
         System.out.println("print size :"+size);
     }
+    */
    /* @AfterMethod(alwaysRun = true)
     public void tearDown()
     {
